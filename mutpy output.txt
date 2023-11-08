@@ -1,0 +1,805 @@
+﻿Microsoft Windows [Version 10.0.19045.3570]
+(c) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\sophi>cd onedrive
+
+
+C:\Users\sophi\OneDrive>cd desktop
+
+
+C:\Users\sophi\OneDrive\Desktop>cd ssw567-triangle
+
+
+C:\Users\sophi\OneDrive\Desktop\SSW567-Triangle>mut.py --target classify_triangle --unit-test test_triangle -m
+[*] Start mutation process:
+   - targets: classify_triangle
+   - tests: test_triangle
+[*] 7 tests passed:
+   - test_triangle [0.00100 s]
+[*] Start mutants generation and execution:
+   - [#   1] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b - c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00059 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#   2] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b >= a - c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00099 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#   3] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b >= a + c or c >= a - b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#   4] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a * 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00107 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#   5] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) - (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00093 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#   6] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b * 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00153 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#   7] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c * 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#   8] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b * 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00085 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#   9] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) - (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00097 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#  10] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c * 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00095 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#  11] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a * 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00101 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#  12] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a * 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00000 s] survived
+   - [#  13] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) - (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00101 s] survived
+   - [#  14] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c * 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00000 s] survived
+   - [#  15] AOR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b * 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00113 s] survived
+   - [#  16] COD classify_triangle:
+--------------------------------------------------------------------------------
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+- 13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
++ 13:     if (isinstance(a, int) and isinstance(b, int) and isinstance(c, int)):
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+--------------------------------------------------------------------------------
+[0.00095 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  17] COI classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if not ((a >= 200 or b >= 200 or c >= 200)):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00085 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  18] COI classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if not ((a <= 0 or b <= 0 or c <= 0)):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  19] COI classify_triangle:
+--------------------------------------------------------------------------------
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+- 13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
++ 13:     if not ((not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))))):
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  20] COI classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if not ((a >= b + c or b >= a + c or c >= a + b)):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  21] COI classify_triangle:
+--------------------------------------------------------------------------------
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+- 18:     if (a == b and b == c):
++ 18:     if not ((a == b and b == c)):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+--------------------------------------------------------------------------------
+[0.00059 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  22] COI classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif not (((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2)):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  23] COI classify_triangle:
+--------------------------------------------------------------------------------
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+- 22:     elif (a != b and b != c and a != c):
++ 22:     elif not ((a != b and b != c and a != c)):
+  23:         return 'Scalene'
+  24:     else:
+  25:         return 'Isosceles'
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  24] LCR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a >= 200 and b >= 200 and c >= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_invalid_input_200 (test_triangle.TestTriangles.test_invalid_input_200)
+   - [#  25] LCR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a <= 0 and b <= 0 and c <= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00227 s] killed by test_invalid_inputs (test_triangle.TestTriangles.test_invalid_inputs)
+   - [#  26] LCR classify_triangle:
+--------------------------------------------------------------------------------
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+- 13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
++ 13:     if not ((isinstance(a, int) or isinstance(b, int) or isinstance(c, int))):
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+--------------------------------------------------------------------------------
+[0.00010 s] killed by test_invalid_inputs (test_triangle.TestTriangles.test_invalid_inputs)
+   - [#  27] LCR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c and b >= a + c and c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00088 s] killed by test_not_a_triangle (test_triangle.TestTriangles.test_not_a_triangle)
+   - [#  28] LCR classify_triangle:
+--------------------------------------------------------------------------------
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+- 18:     if (a == b and b == c):
++ 18:     if (a == b or b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  29] LCR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 and (b ** 2) + (c ** 2) == a ** 2 and (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00096 s] killed by test_right_triangles (test_triangle.TestTriangles.test_right_triangles)
+   - [#  30] LCR classify_triangle:
+--------------------------------------------------------------------------------
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+- 22:     elif (a != b and b != c and a != c):
++ 22:     elif (a != b or b != c or a != c):
+  23:         return 'Scalene'
+  24:     else:
+  25:         return 'Isosceles'
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  31] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a <= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00163 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  32] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a > 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00045 s] survived
+   - [#  33] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a >= 200 or b <= 200 or c >= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  34] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a >= 200 or b > 200 or c >= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00000 s] survived
+   - [#  35] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a >= 200 or b >= 200 or c <= 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  36] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   4:
+   5:     '''Function testing if user input is a triangle.'''
+   6:
+   7:
+-  8:     if (a >= 200 or b >= 200 or c >= 200):
++  8:     if (a >= 200 or b >= 200 or c > 200):
+   9:         return 'InvalidInput'
+  10:     if (a <= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_invalid_input_200 (test_triangle.TestTriangles.test_invalid_input_200)
+   - [#  37] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a >= 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00129 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  38] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a < 0 or b <= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00094 s] killed by test_invalid_inputs (test_triangle.TestTriangles.test_invalid_inputs)
+   - [#  39] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a <= 0 or b >= 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  40] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a <= 0 or b < 0 or c <= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00000 s] survived
+   - [#  41] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a <= 0 or b <= 0 or c >= 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00095 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  42] ROR classify_triangle:
+--------------------------------------------------------------------------------
+   6:
+   7:
+   8:     if (a >= 200 or b >= 200 or c >= 200):
+   9:         return 'InvalidInput'
+- 10:     if (a <= 0 or b <= 0 or c <= 0):
++ 10:     if (a <= 0 or b <= 0 or c < 0):
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+--------------------------------------------------------------------------------
+[0.00016 s] survived
+   - [#  43] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a <= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00205 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  44] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a > b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00102 s] survived
+   - [#  45] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b <= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  46] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b > a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00036 s] survived
+   - [#  47] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b >= a + c or c <= a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  48] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  11:         return 'InvalidInput'
+  12:
+  13:     if not ((isinstance(a, int) and isinstance(b, int) and isinstance(c, int))):
+  14:         return 'InvalidInput'
+- 15:     if (a >= b + c or b >= a + c or c >= a + b):
++ 15:     if (a >= b + c or b >= a + c or c > a + b):
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+--------------------------------------------------------------------------------
+[0.00100 s] survived
+   - [#  49] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+- 18:     if (a == b and b == c):
++ 18:     if (a != b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+--------------------------------------------------------------------------------
+[0.00086 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  50] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  14:         return 'InvalidInput'
+  15:     if (a >= b + c or b >= a + c or c >= a + b):
+  16:         return 'NotATriangle'
+  17:
+- 18:     if (a == b and b == c):
++ 18:     if (a == b and b != c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_equilateral_triangles (test_triangle.TestTriangles.test_equilateral_triangles)
+   - [#  51] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) != c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  52] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) != a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00013 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  53] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  16:         return 'NotATriangle'
+  17:
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+- 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
++ 20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) != b ** 2):
+  21:         return 'Right'
+  22:     elif (a != b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+--------------------------------------------------------------------------------
+[0.00000 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  54] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+- 22:     elif (a != b and b != c and a != c):
++ 22:     elif (a == b and b != c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+  25:         return 'Isosceles'
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  55] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+- 22:     elif (a != b and b != c and a != c):
++ 22:     elif (a != b and b == c and a != c):
+  23:         return 'Scalene'
+  24:     else:
+  25:         return 'Isosceles'
+--------------------------------------------------------------------------------
+[0.00059 s] killed by test_isosceles_triangles (test_triangle.TestTriangles.test_isosceles_triangles)
+   - [#  56] ROR classify_triangle:
+--------------------------------------------------------------------------------
+  18:     if (a == b and b == c):
+  19:         return 'Equilateral'
+  20:     elif ((a ** 2) + (b ** 2) == c ** 2 or (b ** 2) + (c ** 2) == a ** 2 or (a ** 2) + (c ** 2) == b ** 2):
+  21:         return 'Right'
+- 22:     elif (a != b and b != c and a != c):
++ 22:     elif (a != b and b != c and a == c):
+  23:         return 'Scalene'
+  24:     else:
+  25:         return 'Isosceles'
+--------------------------------------------------------------------------------
+[0.00095 s] killed by test_scalene_triangles (test_triangle.TestTriangles.test_scalene_triangles)
+[*] Mutation score [0.57894 s]: 80.4%
+   - all: 56
+   - killed: 45 (80.4%)
+   - survived: 11 (19.6%)
+   - incompetent: 0 (0.0%)
+   - timeout: 0 (0.0%)
