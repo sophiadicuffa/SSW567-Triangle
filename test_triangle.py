@@ -61,6 +61,31 @@ class TestTriangles(unittest.TestCase):
                          'Equilateral', '1,1,1 should be equilateral')
         self.assertEqual(classify_triangle(10, 10, 10),
                          'Equilateral', '10,10,10 should be equilateral')
+        
+    def test_invalid_input_200(self):
+        # Test case where one side is greater than or equal to 200
+        self.assertEqual(classify_triangle(201, 100, 150), 'InvalidInput')
+        self.assertEqual(classify_triangle(100, 201, 150), 'InvalidInput')
+        self.assertEqual(classify_triangle(100, 150, 200), 'InvalidInput')
+
+    def test_invalid_input_less_than_or_equal_to_0(self):
+        # Test case where one side is less than or equal to 0
+        self.assertEqual(classify_triangle(-1, 5, 10), 'InvalidInput')
+        self.assertEqual(classify_triangle(5, -1, 10), 'InvalidInput')
+        self.assertEqual(classify_triangle(5, 10, 0), 'InvalidInput')
+        self.assertEqual(classify_triangle(-1, -1, -1), 'InvalidInput')
+
+    def test_invalid_input_non_integer(self):
+        # Test case where at least one side is not an integer
+        self.assertEqual(classify_triangle('a', 5, 10), 'InvalidInput')
+        self.assertEqual(classify_triangle(5, 10, 3.14), 'InvalidInput')
+        self.assertEqual(classify_triangle(5.5, 10, 3), 'InvalidInput')
+
+    def test_not_a_triangle_a(self):
+        self.assertEqual(classify_triangle(100, 3, 1), 'NotATriangle')  # Sum of two sides is less than the third side
+    def test_not_a_triangle_b(self):
+        self.assertEqual(classify_triangle(1, 300, 1), 'NotATriangle')  # Sum of two sides is less than the third side
+    
 
 
 if __name__ == '__main__':
